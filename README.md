@@ -1,11 +1,12 @@
 # question-answer-express-js-backend
 Question Answer Api backend javascript express.js... 
 
-npm install   for node modules
+# npm install   for node modules
 
-routers:
+# routers:
 
-Auth: 
+# Auth: 
+
 router.post("/register", cors(), register);
 router.post("/login", cors(), login);
 router.get("/profile", getAccessToRoute, getUser);
@@ -18,7 +19,7 @@ router.post("/upload", [
 ]);
 
 
-Admin: 
+#  Admin: 
 router.get("/block/:id", checkUserExist, blockUser);
 router.delete("/delete/:id", checkUserExist, deleteUser);
 
@@ -48,7 +49,7 @@ router.delete(
   deleteAnswer
 );
 
-Question: 
+ #  Question: 
 router.get("/:id/like", [getAccessToRoute, checkQuestionExist], likeQuestion);
 router.get(
   "/:id/unlike",
@@ -97,7 +98,7 @@ router.delete(
 );
 router.use("/:question_id/answer", checkQuestionExist, answer);
 
-Users:
+#  Users:
 router.get("/:id", checkUserExist, getSingleUser);
 router.get("/", userQueryMiddleWare(User), getAllUsers);
 
