@@ -8,6 +8,7 @@ Question Answer Api backend javascript express.js...
 # Auth: 
 
 router.post("/register", cors(), register);
+
 router.post("/login", cors(), login);
 router.get("/profile", getAccessToRoute, getUser);
 router.get("/logout", getAccessToRoute, logout);
